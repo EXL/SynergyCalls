@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -108,9 +109,11 @@ public class MainActivity extends Activity {
         fillLayoutBySettings();
 
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 writeSettings();
+                Toast.makeText(v.getContext(), "Setting Saved", Toast.LENGTH_SHORT).show();
             }
         });
     }
