@@ -38,7 +38,7 @@ public class CallReceiver extends PhonecallReceiver {
             this.time = time;
             this.timeEnd = timeEnd;
 
-            DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
+            DateFormat df = new SimpleDateFormat("dd-MM-yyyy_HH:mm:ss");
             time_s = df.format(time);
             if (timeEnd != null) {
                 timeEnd_s = df.format(timeEnd);
