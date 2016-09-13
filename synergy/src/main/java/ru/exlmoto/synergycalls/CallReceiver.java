@@ -57,9 +57,9 @@ public class CallReceiver extends PhonecallReceiver {
                 URL url = new URL(a_url);
                 HttpURLConnection connection = (HttpURLConnection)url.openConnection();
                 String urlParameters = "phone=" + value + ";";
-                urlParameters += "time=" + time_s + ";";
+                urlParameters += "time=" + time_s;
                 if (timeEnd != null) {
-                    urlParameters += "time_end=" + timeEnd_s;
+                    urlParameters += ";time_end=" + timeEnd_s;
                 }
                 connection.setRequestMethod("POST");
                 // connection.setRequestProperty("USER-AGENT", "Mozilla/5.0");
