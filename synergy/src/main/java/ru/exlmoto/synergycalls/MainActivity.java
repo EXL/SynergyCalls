@@ -73,6 +73,8 @@ public class MainActivity extends Activity {
         editor.putString("miss", (SynergySettings.miss != null && !SynergySettings.miss.isEmpty()) ? SynergySettings.miss : "http://exlmoto.ru");
 
         editor.commit();
+
+        updateValues();
     }
 
     private void initWidgets() {
@@ -109,14 +111,16 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 writeSettings();
-
-                CallReceiver.inUrl = SynergySettings.in;
-                CallReceiver.inEUrl = SynergySettings.inE;
-                CallReceiver.outUrl = SynergySettings.out;
-                CallReceiver.outEUrl = SynergySettings.outE;
-                CallReceiver.missUrl = SynergySettings.miss;
             }
         });
+    }
+
+    private void updateValues() {
+        CallReceiver.inUrl = SynergySettings.in;
+        CallReceiver.inEUrl = SynergySettings.inE;
+        CallReceiver.outUrl = SynergySettings.out;
+        CallReceiver.outEUrl = SynergySettings.outE;
+        CallReceiver.missUrl = SynergySettings.miss;
     }
 
     @Override
