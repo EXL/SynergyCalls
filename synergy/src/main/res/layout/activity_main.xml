@@ -95,9 +95,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Especially for Synergy by EXL, v1.0 | 15-JAN-2016"
+                android:text="Especially for Synergy by EXL"
                 android:id="@+id/textView3"
-                android:layout_column="0"
-            android:layout_gravity="right" />
+                android:layout_gravity="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="v1.0 | 15-JAN-2016"
+            android:id="@+id/textView4"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:textStyle="italic" />
     </LinearLayout>
 </ScrollView>

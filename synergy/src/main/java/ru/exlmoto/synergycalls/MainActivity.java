@@ -113,7 +113,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 writeSettings();
-                Toast.makeText(v.getContext(), "Setting Saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), "Settings Saved", Toast.LENGTH_SHORT).show();
             }
         });
     }
