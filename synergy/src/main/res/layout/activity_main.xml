@@ -12,6 +12,8 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="vertical">
 
         <TextView
@@ -103,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="v1.0 | 15-JAN-2016"
+            android:text="v1.0 | 23-JAN-2016"
             android:id="@+id/textView4"
             android:layout_gravity="right"
             android:layout_margin="@dimen/activity_horizontal_margin"
