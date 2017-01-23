@@ -28,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/editTextIn"
                 android:layout_column="0"
+                android:inputType="textNoSuggestions"
                 android:text="http://exlmoto.ru" />
 
             <TextView
@@ -42,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/editTextOut"
                 android:layout_column="0"
+                android:inputType="textNoSuggestions"
                 android:text="http://exlmoto.ru" />
 
             <TextView
@@ -56,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/editTextInEnd"
                 android:layout_column="0"
+                android:inputType="textNoSuggestions"
                 android:text="http://exlmoto.ru" />
 
             <TextView
@@ -70,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/editTextOutEnd"
                 android:layout_column="0"
+                android:inputType="textNoSuggestions"
                 android:text="http://exlmoto.ru" />
 
             <TextView
@@ -84,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/editTextMissing"
                 android:layout_column="0"
+                android:inputType="textNoSuggestions"
                 android:text="http://exlmoto.ru" />
 
         <Button
