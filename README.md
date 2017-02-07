@@ -50,4 +50,4 @@ You can also import this project in your favorite IDE: Eclipse or Android Studio
 
 ## More information
 
-Please read [Making Guide (In Russian)](http://exlmoto.ru/new-updates-and-tools) for more info about making Synergy Calls for Android OS.
+Please read [Making Guide (In Russian)](http://exlmoto.ru/new-updates-and-tools#1) for more info about making Synergy Calls for Android OS.
