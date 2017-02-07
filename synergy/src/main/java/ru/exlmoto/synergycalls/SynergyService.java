@@ -26,6 +26,7 @@ package ru.exlmoto.synergycalls;
 
 import android.app.Service;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -39,6 +40,9 @@ public class SynergyService extends Service {
         super.onCreate();
         Log.d(LOG_TAG, "onCreate");
         callReceiver = new CallReceiver();
+        SharedPreferences sharedPreferences =
+                getSharedPreferences("ru.exlmoto.synergycall", MODE_PRIVATE);
+        callReceiver.updateValues(sharedPreferences);
     }
 
     public int onStartCommand(Intent intent, int flags, int startId) {

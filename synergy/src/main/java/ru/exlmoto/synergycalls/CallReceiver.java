@@ -25,6 +25,7 @@
 package ru.exlmoto.synergycalls;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -70,7 +71,6 @@ public class CallReceiver extends PhoneCallReceiver {
                 timeEnd_s = "";
             }
 
-
             Log.d(APP_TAG, "POST: " + this.a_url + " " + this.value + " " + this.time + " " + this.timeEnd);
         }
         protected void onPreExecute() { }
@@ -113,11 +113,11 @@ public class CallReceiver extends PhoneCallReceiver {
 
     public static final String APP_TAG = "CallReceiver";
 
-    public static String inUrl = "http://exlmoto.ru";
-    public static String inEUrl = "http://exlmoto.ru";
-    public static String outUrl = "http://exlmoto.ru";
-    public static String outEUrl = "http://exlmoto.ru";
-    public static String missUrl = "http://exlmoto.ru";
+    public static String inUrl;
+    public static String inEUrl;
+    public static String outUrl;
+    public static String outEUrl;
+    public static String missUrl;
 
     @Override
     protected void onIncomingCallStarted(Context ctx, String number, Date start) {
@@ -152,5 +152,19 @@ public class CallReceiver extends PhoneCallReceiver {
         Log.d(APP_TAG, "Missed: " + number);
 
         new PostClass(ctx, missUrl, number, start, null).execute();
+    }
+
+    public static void updateValues(SharedPreferences settingsStorage) {
+        Log.d(APP_TAG, "Update Values from SharedPreferences");
+        inUrl = settingsStorage.getString("in", "http://exlmoto.ru");
+        inEUrl = settingsStorage.getString("inE", "http://exlmoto.ru");
+        outUrl = settingsStorage.getString("out", "http://exlmoto.ru");
+        outEUrl = settingsStorage.getString("outE", "http://exlmoto.ru");
+        missUrl = settingsStorage.getString("miss", "http://exlmoto.ru");
+        Log.d(APP_TAG, "inUrl: " + inUrl);
+        Log.d(APP_TAG, "inEUrl: " + inEUrl);
+        Log.d(APP_TAG, "outUrl: " + outUrl);
+        Log.d(APP_TAG, "outEUrl: " + outEUrl);
+        Log.d(APP_TAG, "missUrl: " + missUrl);
     }
 }

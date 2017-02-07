@@ -104,7 +104,7 @@ public class MainActivity extends Activity {
 
         editor.commit();
 
-        updateValues();
+        CallReceiver.updateValues(settingStorage);
     }
 
     private void initWidgets() {
@@ -145,14 +145,6 @@ public class MainActivity extends Activity {
                 Toast.makeText(v.getContext(), "Settings Saved", Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    private void updateValues() {
-        CallReceiver.inUrl = SynergySettings.in;
-        CallReceiver.inEUrl = SynergySettings.inE;
-        CallReceiver.outUrl = SynergySettings.out;
-        CallReceiver.outEUrl = SynergySettings.outE;
-        CallReceiver.missUrl = SynergySettings.miss;
     }
 
     @Override
