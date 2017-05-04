@@ -32,21 +32,21 @@ git clone https://github.com/EXL/SynergyCalls SynergyCallsAndroid
 
 ```sh
 cd ~/Deploy/SynergyCallsAndroid/
-ANDROID_HOME="/opt/android/android-sdk/" ./gradlew assembleDebug
+ANDROID_HOME="/opt/android-sdk/" ./gradlew assembleDebug
 ```
 
 * Install Synergy Calls APK-package on your Android device via adb;
 
 ```sh
 cd ~/Deploy/SynergyCallsAndroid/
-/opt/android/android-sdk-linux/platform-tools/adb install -r synergy/build/outputs/apk/synergy-debug.apk
+/opt/android-sdk/platform-tools/adb install -r synergy/build/outputs/apk/synergy-debug.apk
 ```
 
-* Check all the necessary permissions;
+* Check the all necessary permissions;
 
 * Run and enjoy!
 
-You can also import this project in your favorite IDE: Eclipse or Android Studio and build the APK-package by using these programs.
+You can also open this project in Android Studio IDE and build the APK-package by using this program.
 
 ## More information
 
