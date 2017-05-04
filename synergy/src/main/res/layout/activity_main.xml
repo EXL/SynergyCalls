@@ -99,7 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Especially for Synergy by EXL\nhttp://exlmoto.ru/new-updates-and-tools#1\nv1.0 | 07-FEB-2017"
+            android:text="Especially for Synergy by EXL\nhttp://exlmoto.ru/new-updates-and-tools#1\nv1.1 | 05-MAY-2017"
             android:id="@+id/textView3"
             android:autoLink="web"/>
     </LinearLayout>
